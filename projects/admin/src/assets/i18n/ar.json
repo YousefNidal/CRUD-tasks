@@ -1,0 +1,22 @@
+{
+    "tasks": {
+ "addTask":"اضافة مهمة",
+ "Tasks":"المهام",
+ "allTasks":"حميع المهام",
+ "users":"المستخدمين",
+ "logout":"تسجيل الخروج",
+ "complete": "مكتمل"
+    },
+    "users": {
+
+    },
+    "general": {
+        "loading":"انتظار"
+    },
+    "toastr": {
+
+    },
+    "buttons": {
+
+    }
+}

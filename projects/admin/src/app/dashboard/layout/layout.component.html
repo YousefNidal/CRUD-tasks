@@ -1,0 +1,49 @@
+
+<nav class=" navbar navbar-expand-lg navbar-light ">
+    <div class="container">
+      <div class="navbar-brand" >{{"tasks.Tasks" | translate}}</div>
+  
+      <div class="collapse  navbar-collapse" id="navbarSupportedContent" >
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="/tasks" routerLinkActive="active">{{"tasks.allTasks" | translate}} <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/users"  routerLinkActive="active">{{"tasks.users" | translate}}</a>
+          </li>
+        </ul>
+       <div class="nav-item d-flex">
+        <a class="nav-link" (click)="logout()">{{"tasks.logout" | translate}}</a>
+        <a class=" nav-link" [style]="'cursor:pointer;'" (click)="changeLanguage()">{{lang == "en"? 'عربي':"English"}} </a>
+       </div>
+      </div>
+
+      <div>
+        <button class="navbar-toggler" type="button" (click)="toggleCollapse()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    
+  
+  </nav>
+  <div class=" lg:d-none mobile-nav d-flex flex-column" *ngIf="open"  >
+    <ul class="navbar-nav mr-auto px-5">
+      <li class="nav-item active text-start">
+        <a class="nav-link px-1" routerLink="/tasks" routerLinkActive="active">{{"tasks.allTasks" | translate}} <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item text-start">
+        <a class="nav-link" routerLink="/users"  routerLinkActive="active">{{"tasks.users" | translate}}</a>
+      </li>
+    </ul>
+   <div class="nav-item text-start px-5 d-flex">
+    <a class="nav-link" (click)="logout()">{{"tasks.logout" | translate}}</a>
+    <a class="nav-link " (click)="changeLanguage()">{{lang === "en"? 'عربي':"English"}} </a>
+   </div>
+  </div>
+  
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>

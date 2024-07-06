@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="imageBox">
+        <img [src]="'https://task-bend.onrender.com/tasks/'+tasksDetails.image" alt="" class="w-100">
+    </div>
+    <div class="d-flex justify-content-between align-items-baseline my-3">
+        <h1 class="card-title ">tasksDetails.title</h1>
+        <button  mat-raised-button color="warn" (click)="complete(tasksId )">Complete</button>
+    </div>
+    <p class="card-subtitle mb-2 text-muted">Dead-Line Date : {{tasksDetails.deadline}}</p>
+    <hr>
+    <p class="card-text">{{tasksDetails.description}}</p>
+</div>
